@@ -1,10 +1,9 @@
-package com.zerobase.cms.user.client.service;
+package com.zerobase.cms.user.client.service.customer;
 
 import com.zerobase.cms.user.client.domain.SingUpForm;
 import com.zerobase.cms.user.client.domain.model.Customer;
 import com.zerobase.cms.user.client.domain.repository.CustomerRepository;
 import com.zerobase.cms.user.exception.CustomException;
-import com.zerobase.cms.user.exception.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
