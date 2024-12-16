@@ -1,8 +1,8 @@
 package com.zerobase.cms.user.client.domain.model;
 
+
 import com.zerobase.cms.user.client.domain.SingUpForm;
 import lombok.*;
-import org.hibernate.envers.AuditOverride;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -15,11 +15,8 @@ import java.util.Locale;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@AuditOverride(forClass = BaseEntity.class)
-public class Customer extends BaseEntity{
-
+public class Seller extends BaseEntity{
     @Id
-    @Column(name = "Id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
@@ -33,11 +30,8 @@ public class Customer extends BaseEntity{
     private String verificationCode;
     private boolean verify;
 
-    @Column(columnDefinition = "int default 0")
-    private Integer balance;
-
-    public static Customer from(SingUpForm form){
-        return Customer.builder()
+    public static Seller from(SingUpForm form){
+        return Seller.builder()
                 .email(form.getEmail().toLowerCase(Locale.ROOT))
                 .password(form.getPassword())
                 .name(form.getName())
@@ -46,4 +40,5 @@ public class Customer extends BaseEntity{
                 .verify(false)
                 .build();
     }
+
 }
