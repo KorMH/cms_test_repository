@@ -1,5 +1,4 @@
-package com.zerobase.cms.user.client.service.seller;
-
+package com.zerobase.cms.user.client.service;
 
 import com.zerobase.cms.user.client.domain.SingUpForm;
 import com.zerobase.cms.user.client.domain.model.Seller;
